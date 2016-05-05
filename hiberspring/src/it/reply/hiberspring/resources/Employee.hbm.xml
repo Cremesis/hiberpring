@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="it.reply.hiberspring.Employee" table="employee">
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property generated="never" lazy="false" name="firstName"
+			type="string">
+			<column name="first_name" />
+		</property>
+		<property generated="never" lazy="false" name="lastName"
+			type="string">
+			<column name="last_name" />
+		</property>
+		<property generated="never" lazy="false" name="salary" type="int">
+			<column name="salary" />
+		</property>
+	</class>
+</hibernate-mapping>
